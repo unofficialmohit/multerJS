@@ -1,5 +1,5 @@
 const express=require('express');
-const PORT=4000;
+const PORT=process.env.PORT||4000;
 const app=express();
 
 const router=require('./router/route');
@@ -9,3 +9,4 @@ app.use('/api/v1',router);
 app.listen(PORT,()=>{
     console.log("Listening to PORT "+PORT)
 })
+module.exports=app;

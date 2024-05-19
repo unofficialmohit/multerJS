@@ -13,8 +13,20 @@ const storage = multer.diskStorage({
   })
   
 // const upload=multer({ dest: 'uploads/' });
-const upload=multer({ storage:storage });
+// const upload=multer({ storage:storage });
 // const upload=multer({storage:multerStorage});
+// const upload = multer({ dest: '/tmp/' });
+// const upload = multer({
+//   dest: '/tmp/',
+//   limits: {
+//     fileSize: 10000000 // Limit the file size to 10 MB
+//   }
+// });
+const upload = multer({
+  limits: {
+    fileSize: 10000000 // Limit the file size to 10 MB
+  }
+});
 // const upload=multer();
 
 
